@@ -1,3 +1,8 @@
+# Token :
+username = "babidi"
+password = "Pa$$w0rd"
+
+# ID VMs :
 vm_kali_id = "QTRUD9SGBDNRIIVDNPTLEMPQ27EGGRJI"
 vm_ansible_id = "PLHA21A50Q75U2LON5OIR0JAKE1LV9RH"
 id_tor = "7SG78C2NUVC74OMG8DD7PED9B06NAFLJ"

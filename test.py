@@ -8,9 +8,10 @@ import os
 import vm_fonctions
 import config
 
-vm_fonctions.start_vmrest()
-vm_fonctions.list_vms()
-
+#vm_fonctions.start_vmrest()
+#vm_fonctions.list_vms()
+state_tor = vm_fonctions.show_state(config.id_tor)
 vm_fonctions.power_on(config.id_tor)
+print(state_tor)
 
-vm_fonctions.power_off(config.vm_kali_id)
+#vm_fonctions.power_off(config.vm_kali_id)
