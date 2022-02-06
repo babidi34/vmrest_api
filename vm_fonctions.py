@@ -34,10 +34,15 @@ def power_on(id):
     return vm
 
 def power_off(id):
-    url_vm = f"http://127.0.0.1:8697/api/vms/{str(id)}/power"
-    requete_start = requests.put(url_vm,auth=(config.username,config.password),data='off',headers=headers)
-    print(f"VM Stop")
-    vm = "stop"
+    state = show_state(id)
+    if state == "poweredOn":
+        url_vm = f"http://127.0.0.1:8697/api/vms/{str(id)}/power"
+        requete_stop = requests.put(url_vm,auth=(config.username,config.password),data='off',headers=headers)
+        print(f"VM Stop")
+        vm = "stop"
+    else:
+        vm = "stop"
+        print("VM déjà allumée")
     return vm
 
 def show_ip(id):
