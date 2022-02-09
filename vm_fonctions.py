@@ -3,7 +3,8 @@
 import requests
 import subprocess
 import os
-import config
+from time import sleep
+from vmrest_api import config
 
 headers = {'Content-Type': 'application/vnd.vmware.vmw.rest-v1+json'}
 url_liste = "http://127.0.0.1:8697/api/vms"
@@ -26,6 +27,7 @@ def power_on(id):
     if state == "poweredOff":
         url_vm = f"http://127.0.0.1:8697/api/vms/{str(id)}/power"
         requete_start = requests.put(url_vm,auth=(config.username,config.password),data='on',headers=headers)
+        sleep(10)
         print(f"VM start")
         vm = "start"
     else:
