@@ -27,7 +27,7 @@ def power_on(id):
     if state == "poweredOff":
         url_vm = f"http://127.0.0.1:8697/api/vms/{str(id)}/power"
         requete_start = requests.put(url_vm,auth=(config.username,config.password),data='on',headers=headers)
-        sleep(10)
+        sleep(15)
         print(f"VM start")
         vm = "start"
     else:
