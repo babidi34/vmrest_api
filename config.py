@@ -1,6 +1,6 @@
 # Token :
-username = "babidi"
-password = "Pa$$w0rd"
+username = "user"
+password = "password"
 
 # ID VMs :
 vm_kali_id = "QTRUD9SGBDNRIIVDNPTLEMPQ27EGGRJI"
